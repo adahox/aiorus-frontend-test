@@ -1,8 +1,104 @@
-.background
+$gameWidth: 500px
+$headerHeight: 55px
+
+.header
+    background-image: url('~/public/assets/header.png')
+    background-repeat: no-repeat
+    width: $gameWidth
+    height: $headerHeight
+
+.container
     background-image: url('~/public/assets/background.png')
-    height: 100vh
-    width: 1080px
-    background-attachment: fixed
     background-size: contain
     background-repeat: no-repeat
-    width: auto
+    height: calc(100vh - #{$headerHeight})
+    width: $gameWidth
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    .box
+        padding: 10px
+        // flex: 1
+
+        .claw-button
+            display: grid
+            height: 100%
+            justify-content: center
+            align-items: center
+            .button
+                background-image: url('~/public/assets/claw.png')
+                background-repeat: no-repeat
+                background-size: contain
+                width: 250px
+                height: 250px
+                &:hover
+                    background-image: url('~/public/assets/claw_pressed.png')
+
+        .controls
+            display: grid
+            height: 250px
+            justify-items: center
+            align-items: center
+            .controls-area
+
+                width: 250px
+                position: absolute
+
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+
+                .top, .middle, .bottom
+                    display: flex
+                    flex-direction: row
+
+                .top, .bottom
+                    justify-content: center
+
+                .middle
+                    justify-content: space-between
+
+                .top
+                    .arrow-up
+                        background-image: url('~/public/assets/arrow_up.png')
+                        background-repeat: no-repeat
+                        background-size: contain
+                        background-color: transparent
+                        height: 120px
+                        width: 100px
+                        margin-bottom: -25px
+                        &:hover
+                            background-image: url('~/public/assets/arrow_up_pressed.png')
+
+                .bottom
+                    .arrow-down
+                        background-image: url('~/public/assets/arrow_down.png')
+                        background-repeat: no-repeat
+                        background-size: contain
+                        background-color: transparent
+                        height: 120px
+                        width: 100px
+                        margin-top: -25px
+                        &:hover
+                            background-image: url('~/public/assets/arrow_down_pressed.png')
+
+                .middle
+                    .arrow-left
+                        background-image: url('~/public/assets/arrow_left.png')
+                        background-repeat: no-repeat
+                        background-size: contain
+                        background-color: transparent
+                        height: 100px
+                        width: 110px
+                        &:hover
+                            background-image: url('~/public/assets/arrow_left_pressed.png')
+
+                    .arrow-right
+                        background-image: url('~/public/assets/arrow_right.png')
+                        background-repeat: no-repeat
+                        background-size: contain
+                        background-color: transparent
+                        height: 100px
+                        width: 110px
+                        &:hover
+                            background-image: url('~/public/assets/arrow_right_pressed.png')
