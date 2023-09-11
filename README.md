@@ -22,7 +22,7 @@ Clean code foi desenvolvido a medida da necessidade, não sendo usado em todo o 
 faça o clone deste repositório e logo em seguida instale as dependências
 
 ```
-git clone 
+git clone https://github.com/adahox/aiorus-frontend-test.git
 ...
 npm install
 ```
