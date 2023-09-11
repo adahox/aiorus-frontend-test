@@ -1,0 +1,46 @@
+$gameWidth: 500px
+$headerHeight: 55px
+
+.header
+    background-image: url('~/src/assets/header.png')
+    background-repeat: no-repeat
+    width: $gameWidth
+    height: $headerHeight
+
+.container
+    background-image: url('/src/assets/background.png')
+    background-size: contain
+    background-repeat: no-repeat
+    height: calc(100vh - #{$headerHeight})
+    width: $gameWidth
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    .box
+        padding: 10px
+
+        .controls
+            display: grid
+            height: 250px
+            justify-items: center
+            align-items: center
+            .controls-area
+                width: 250px
+                position: absolute
+
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+
+                .top, .middle, .bottom
+
+                    display: flex
+                    flex-direction: row
+                    button
+                        border: 0
+
+                .top, .bottom
+                    justify-content: center
+
+                .middle
+                    justify-content: space-between

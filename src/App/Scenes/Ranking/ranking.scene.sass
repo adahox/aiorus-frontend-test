@@ -1,0 +1,35 @@
+$gameWidth: 500px
+$headerHeight: 55px
+
+.ranking
+    background-image: url('/src/assets/background.png')
+    background-size: contain
+    background-repeat: no-repeat
+    height: calc(100vh - #{$headerHeight})
+    width: $gameWidth
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    flex-grow: 1
+    align-items: center
+    .title 
+        display: flex
+        height: 150px
+        align-items: center
+        justify-items: center
+    
+        font-size: 3em
+
+    .input-name
+        display: flex
+        justify-items: center
+        align-items: center
+        font-family: 'strong brain'
+        input 
+            height: 30px
+            width: 350px
+            border: 6px solid black
+            border-radius: 10px
+
+
+

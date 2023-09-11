@@ -1,4 +1,3 @@
-import '../public/scss/index.scss';
-import { LoadingScene } from "./App/Scenes/Loading/loading.scene";
+import AppModule from './App/AppModule';
 
-const scene = new LoadingScene();
+new AppModule();

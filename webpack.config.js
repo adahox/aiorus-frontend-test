@@ -34,6 +34,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: './src/main.ts',
     mode: 'development',
+    cache: false,
     devServer: {
         static: {
             directory: path.join(__dirname, 'src'),
@@ -45,7 +46,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpg|gif|mp3)$/i,
+                test: /\.(png|jpg|gif)$/i,
                 dependency: { not: ['url'] },
                 use: [
                     {
@@ -56,6 +57,26 @@ module.exports = {
                     },
                 ],
                 type: 'javascript/auto'
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: 'fonts/'
+                    }
+                  }
+                ]
+              },
+            {
+                test: /\.(mp3|wav)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
             },
             {
                 test: /\.(sa|sc|c)ss$/,
