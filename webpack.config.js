@@ -40,13 +40,12 @@ module.exports = {
         },
         compress: true,
         port: 9000,
-        hot: true,
         open: true
     },
     module: {
         rules: [
             {
-                test: /\.(png|jpg|gif)$/i,
+                test: /\.(png|jpg|gif|mp3)$/i,
                 dependency: { not: ['url'] },
                 use: [
                     {
