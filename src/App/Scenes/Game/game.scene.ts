@@ -1,4 +1,5 @@
 import { Scene } from "../../../../lib/Clamp/Core/Decorators/Scene";
+import Header from "../../header/header.object";
 import ambientAudio from './../../../sounds/music.mp3';
 import GameSceneTemplate from "./game.scene.html";
 import style from './game.scene.sass'
@@ -17,7 +18,8 @@ import UpArrow from "./Objects/up-arrow/up-arrow.object";
         DownArrow,
         LeftArrow,
         RightArrow,
-        UpArrow
+        UpArrow,
+        Header
     ]
 })
 export class GameScene extends HTMLElement {
